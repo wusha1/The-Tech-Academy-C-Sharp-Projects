@@ -26,5 +26,19 @@ class Program
 
         // Keeps console open (important for testing)
         Console.ReadLine();
+
+        // True never changes
+        while (true)
+        {
+            Console.WriteLine("This is an infinite loop...");
+
+            int counter = 0;
+
+            while (counter < 5)
+            {
+                Console.WriteLine("Loop iteration: " + counter);
+                counter++;
+            }
+        }
     }
 }
