@@ -5,7 +5,7 @@ class Program
 {
     static void Main()
     {
-        // Part 1 - Array
+        // Part 1
         string[] words = { "Apple", "Banana", "Cherry", "Orange" };
 
         Console.WriteLine("Enter some text:");
@@ -22,7 +22,7 @@ class Program
             Console.WriteLine(word);
         }
 
-        // Part 2 - Fixed loop
+        // Part 2
         Console.WriteLine("\nPart 2:");
         int counter = 0;
 
@@ -32,7 +32,7 @@ class Program
             counter++;
         }
 
-        // Part 3 - < vs <=
+        // Part 3
         Console.WriteLine("\nPart 3 (<):");
         for (int i = 0; i < 5; i++)
         {
@@ -45,7 +45,7 @@ class Program
             Console.WriteLine(i);
         }
 
-        // Part 4 - Single match
+        // Part 4
         List<string> fruits = new List<string>()
         {
             "apple", "banana", "cherry", "orange", "grape"
@@ -71,7 +71,7 @@ class Program
             Console.WriteLine("Not found.");
         }
 
-        // Part 5 - Multiple matches
+        // Part 5
         List<string> items = new List<string>()
         {
             "apple", "banana", "cherry", "apple", "orange", "banana"
@@ -94,6 +94,29 @@ class Program
         if (!foundItem)
         {
             Console.WriteLine("Not found.");
+        }
+
+        // Part 6
+        List<string> duplicateList = new List<string>()
+        {
+            "apple", "banana", "cherry", "apple", "orange", "banana"
+        };
+
+        Console.WriteLine("\nPart 6 - Duplicate check:");
+
+        List<string> seen = new List<string>();
+
+        foreach (string item in duplicateList)
+        {
+            if (seen.Contains(item))
+            {
+                Console.WriteLine(item + " - already appeared");
+            }
+            else
+            {
+                Console.WriteLine(item + " - new item");
+                seen.Add(item);
+            }
         }
 
         Console.WriteLine("\nPress Enter to close.");
