@@ -5,16 +5,15 @@ class Program
 {
     static void Main()
     {
-        // Prt. One
-
+        // Part 1 - Array
         string[] words = { "Apple", "Banana", "Cherry", "Orange" };
 
-        Console.WriteLine("Enter some text to add to each word:");
+        Console.WriteLine("Enter some text:");
         string userInput = Console.ReadLine();
 
         for (int i = 0; i < words.Length; i++)
         {
-            words[i] = words[i] + " " + userInput;
+            words[i] += " " + userInput;
         }
 
         Console.WriteLine("\nUpdated words:");
@@ -23,70 +22,81 @@ class Program
             Console.WriteLine(word);
         }
 
-        // Prt. Two
-
-        Console.WriteLine("\nPart Two - Fixed loop:");
+        // Part 2 - Fixed loop
+        Console.WriteLine("\nPart 2:");
         int counter = 0;
 
         while (counter < 5)
         {
-            Console.WriteLine("Loop iteration: " + counter);
+            Console.WriteLine("Loop: " + counter);
             counter++;
         }
 
-        // Prt. Three
-
-        Console.WriteLine("\nPart Three - Loop using < operator:");
+        // Part 3 - < vs <=
+        Console.WriteLine("\nPart 3 (<):");
         for (int i = 0; i < 5; i++)
         {
-            Console.WriteLine("i = " + i);
+            Console.WriteLine(i);
         }
 
-        Console.WriteLine("\nPart Three - Loop using <= operator:");
+        Console.WriteLine("\nPart 3 (<=):");
         for (int i = 0; i <= 5; i++)
         {
-            Console.WriteLine("i = " + i);
+            Console.WriteLine(i);
         }
 
-        // Prt. Four
-
-        // 1. List of unique strings
+        // Part 4 - Single match
         List<string> fruits = new List<string>()
         {
-            "apple",
-            "banana",
-            "cherry",
-            "orange",
-            "grape"
+            "apple", "banana", "cherry", "orange", "grape"
         };
 
-        // 2. Ask user to search
-        Console.WriteLine("\nPart Four - Search for a fruit:");
+        Console.WriteLine("\nPart 4 - Search:");
         string searchInput = Console.ReadLine().ToLower();
 
         bool found = false;
 
-        // 3. Loop through list
         for (int i = 0; i < fruits.Count; i++)
         {
             if (fruits[i] == searchInput)
             {
-                Console.WriteLine("Found at index: " + i);
+                Console.WriteLine("Index: " + i);
                 found = true;
-
-                // 5. Stop loop when found
                 break;
             }
         }
 
-        // 4. If not found
         if (!found)
         {
-            Console.WriteLine("That item is not in the list.");
+            Console.WriteLine("Not found.");
         }
 
-        // Keeps console open
-        Console.WriteLine("\nPress Enter to close the program.");
+        // Part 5 - Multiple matches
+        List<string> items = new List<string>()
+        {
+            "apple", "banana", "cherry", "apple", "orange", "banana"
+        };
+
+        Console.WriteLine("\nPart 5 - Search:");
+        string searchItem = Console.ReadLine().ToLower();
+
+        bool foundItem = false;
+
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (items[i] == searchItem)
+            {
+                Console.WriteLine("Index: " + i);
+                foundItem = true;
+            }
+        }
+
+        if (!foundItem)
+        {
+            Console.WriteLine("Not found.");
+        }
+
+        Console.WriteLine("\nPress Enter to close.");
         Console.ReadLine();
     }
 }
