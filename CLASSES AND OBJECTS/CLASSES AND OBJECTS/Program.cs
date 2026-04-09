@@ -8,7 +8,8 @@ namespace TwentyOne
         static void Main(string[] args)
         {
             Deck deck = new Deck();
-            deck = Shuffle(deck);
+            int timesShuffled = 0;
+            deck = Shuffle(deck, out timesShuffled, 3);
 
             foreach (Card card in deck.Cards)
             {
@@ -16,22 +17,30 @@ namespace TwentyOne
             }
 
             Console.WriteLine(deck.Cards.Count);
+            Console.WriteLine("Times shuffled: {0}", timesShuffled);
             Console.ReadLine();
         }
 
-        public static Deck Shuffle(Deck deck)
+        public static Deck Shuffle(Deck deck, out int timesShuffled, int times = 1)
         {
-            List<Card> tempList = new List<Card>();
+            timesShuffled = 0;
             Random random = new Random();
 
-            while (deck.Cards.Count > 0)
+            for (int i = 0; i < times; i++)
             {
-                int randomIndex = random.Next(0, deck.Cards.Count);
-                tempList.Add(deck.Cards[randomIndex]);
-                deck.Cards.RemoveAt(randomIndex);
+                List<Card> tempList = new List<Card>();
+
+                while (deck.Cards.Count > 0)
+                {
+                    int randomIndex = random.Next(0, deck.Cards.Count);
+                    tempList.Add(deck.Cards[randomIndex]);
+                    deck.Cards.RemoveAt(randomIndex);
+                }
+
+                deck.Cards = tempList;
+                timesShuffled++;
             }
 
-            deck.Cards = tempList;
             return deck;
         }
     }
