@@ -35,12 +35,8 @@ namespace TwentyOne
                     int randomIndex = random.Next(0, deck.Cards.Count);
                     tempList.Add(deck.Cards[randomIndex]);
                     deck.Cards.RemoveAt(randomIndex);
-                }
-
-                deck.Cards = tempList;
-                timesShuffled++;
             }
-
+            deck.Cards = TempList;
             return deck;
         }
     }
