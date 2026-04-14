@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace TwentyOne
 {
@@ -8,8 +7,8 @@ namespace TwentyOne
         static void Main(string[] args)
         {
             Deck deck = new Deck();
-            int timesShuffled = 0;
-            deck = Shuffle(deck, out timesShuffled, 3);
+
+            deck.Shuffle(3);
 
             foreach (Card card in deck.Cards)
             {
@@ -17,27 +16,17 @@ namespace TwentyOne
             }
 
             Console.WriteLine(deck.Cards.Count);
-            Console.WriteLine("Times shuffled: {0}", timesShuffled);
             Console.ReadLine();
         }
 
-        public static Deck Shuffle(Deck deck, out int timesShuffled, int times = 1)
-        {
-            timesShuffled = 0;
-            Random random = new Random();
-
-            for (int i = 0; i < times; i++)
-            {
-                List<Card> tempList = new List<Card>();
-
-                while (deck.Cards.Count > 0)
-                {
-                    int randomIndex = random.Next(0, deck.Cards.Count);
-                    tempList.Add(deck.Cards[randomIndex]);
-                    deck.Cards.RemoveAt(randomIndex);
-            }
-            deck.Cards = TempList;
-            return deck;
-        }
+        // Old shuffle method (kept for reference)
+        //public static Deck Shuffle(Deck deck, int times)
+        //{
+        //    for (int i = 0; i < times; i++)
+        //    {
+        //        deck = Shuffle(deck);
+        //    }
+        //    return deck;
+        //}
     }
 }
