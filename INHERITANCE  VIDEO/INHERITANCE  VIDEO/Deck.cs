@@ -21,13 +21,13 @@ namespace TwentyOne
 
             foreach (string face in Faces)
             {
-                foreach (string suit in Suits)
-                {
-                    Card card = new Card();
-                    card.Suit = suit;
-                    card.Face = face;
-                    Cards.Add(card);
-                }
+                //foreach (string suit in Suits)
+                //{
+                //    Card card = new Card();
+                //    card.Suit = suit;
+                //    card.Face = face;
+                //    Cards.Add(card);
+                //}
             }
         }
 

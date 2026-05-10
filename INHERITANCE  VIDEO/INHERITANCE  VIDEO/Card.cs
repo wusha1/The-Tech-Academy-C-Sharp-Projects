@@ -2,12 +2,19 @@
 {
     public class Card
     {
-        public string Suit { get; set; }
-        public string Face { get; set; }
-
-        public override string ToString()
+        public Card()
         {
-            return Face + " of " + Suit;
+            Suit = "Spades";
+            Face = "Two";
         }
+        public Suit Suit { get; set; }
+        public string Face { get; set; }
+    }
+    public enum Suit
+    {
+        Clubs=4, 
+        Diamonds=10, 
+        Hearts12,
+        Spades=15
     }
 }
