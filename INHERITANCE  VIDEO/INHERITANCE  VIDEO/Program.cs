@@ -10,19 +10,19 @@ namespace TwentyOne
     {
         static void Main(string[] args)
         {
-            Card card = new Card();
-            card.Suit = Suit.Clubs;
-            int underlyingVlaue = Convert.ToInt32(Suit.Diamonds);
-            Console.WriteLine(underlyingVlaue);
+            Card card1 = new Card();
+            Card card2 = new Card();
+            card1.Face = Face.Eight;
+            card2.Face = Face.King;
 
-            Deck deck = new Deck();
-            deck.Shuffle(3);
+            //Deck deck = new Deck();
+            //deck.Shuffle(3);
 
             //foreach (Card card in deck.Cards)
             //{
             //    Console.WriteLine(card.Face + " of " + card.Suit);
             //}
-            Console.WriteLine(deck.Cards.Count);
+            //Console.WriteLine(deck.Cards.Count);
             Console.ReadLine();
         }
     }
