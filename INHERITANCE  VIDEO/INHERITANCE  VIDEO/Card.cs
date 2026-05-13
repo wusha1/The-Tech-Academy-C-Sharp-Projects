@@ -1,6 +1,6 @@
 ﻿namespace TwentyOne
 {
-    public class Card
+    public struct Card
     {
         public Card()
         {
