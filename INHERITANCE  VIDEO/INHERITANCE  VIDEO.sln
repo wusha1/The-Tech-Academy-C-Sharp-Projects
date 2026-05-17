@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.37027.9 d17.14
+VisualStudioVersion = 17.14.37027.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INHERITANCE  VIDEO", "INHERITANCE  VIDEO\INHERITANCE  VIDEO.csproj", "{DCEC1626-9903-45FD-A651-ADC20A9461C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwentyOne", "INHERITANCE  VIDEO\TwentyOne.csproj", "{DCEC1626-9903-45FD-A651-ADC20A9461C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
